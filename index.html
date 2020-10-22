@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script>function fun(){
+    const ele= document.createElement("tr");
+    var x=document.querySelectorAll(".price");
+    var total=0;
+    for (var i = 0; i < x.length; i++)
+    {
+        total += parseInt(x[i].innerText);
+    }
+    document.getElementById('gtotal').innerText = total;
+    const containingElement=document.body;
+    containingElement.appendChild(ele);
+}</script>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  </head>
+  <body onload="fun()">
+    <table id="table-grocery">        
+        <tr>
+            <td>1</td>
+            <td>Item-2</td>
+            <td data-ns-test="price" class="price">18361</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Item-2</td>
+            <td data-ns-test="price" class="price">18361</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Item-3</td>
+            <td data-ns-test="price" class="price">17373</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Item-4</td>
+            <td data-ns-test="price" class="price">17361</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Total</td>
+            <td data-ns-test="grandTotal" id="gtotal" value="0" class="price">0</td>
+        </tr>
+        
+    </table>
+      </body>
+</html>
